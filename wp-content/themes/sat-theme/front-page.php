@@ -11,7 +11,7 @@ get_header();
                 <br>
                 <p>Please select your account type</p>
                 <div>
-                    <a href="{{ url_for('show_create_teacher') }}" class="btn btn" role="button" aria-pressed="true">Teacher</a>
+                    <a href="http://localhost:8888/login-page/" class="btn btn" role="button" aria-pressed="true">Teacher</a>
 
                     <a href="{{ url_for('show_create_parent') }}" class="ms-5 btn btn" role="button" aria-pressed="true">Parent</a>
                 </div>
@@ -21,6 +21,8 @@ get_header();
             <img src="/wp-content/themes/sat-theme/assets/images/main2.png" alt="mainImg">
         </div>
     </div>
+
+
 </div>
 
 

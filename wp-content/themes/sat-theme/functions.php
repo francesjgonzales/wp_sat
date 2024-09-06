@@ -8,6 +8,20 @@ function sat_theme_support()
 
 add_action('after_setup_theme', 'sat_theme_support');
 
+//add menu
+function sat_menus()
+{
+    $locations = array(
+        'primary' => "Header Menu",
+        'footer' => 'Footer Menu'
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'sat_menus');
+
+
 //insert css style
 function sat_theme_register_styles()
 {
