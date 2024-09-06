@@ -20,19 +20,15 @@ body {
   background-color: rgb(83, 117, 245, 0.25);
 }
 
-.img-fluid {
-  width: 100%;
-}
-
 #main {
   margin: auto;
   padding: 4em;
   text-align: center;
 }
 
-.container2 {
-  margin: 15vh;
-  padding: 1vh;
+.container {
+  margin: auto;
+  width: 100%;
 }
 
 .table {
@@ -43,6 +39,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 ul,
 li,
 p,
@@ -54,8 +51,14 @@ th,
 .form-control,
 .label {
   font-family: "Nunito", sans-serif;
-  color: rgb(59, 11, 114);
   font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(59, 11, 114);
 }
 
 #clock,
@@ -80,41 +83,26 @@ mark {
   background-color: #5375f5;
 }
 
-.container-fluid {
-  margin: 5vh;
-}
-
 .btn {
   background-color: #b8c729;
   color: rgb(59, 11, 114);
+  margin: auto;
+  padding: 0, 1em;
+}
+
+.btn :hover {
+  background-color: #d9dfa5;
 }
 
 .card {
-  margin: 25px;
-  text-align: center;
+  background-color: rgb(83, 117, 245, 0.25);
+  border-style: none;
 }
 
-.heroImg {
-  width: 100%;
-  /* position: absolute; */
-  left: 0px;
-  top: 10px;
-  filter: opacity(80%);
-}
-
-@media (min-width: 375px) {
-  .heroImg {
-    top: 60px;
-    font-size: small;
-    text-align: left;
-  }
-}
-
-.heroTxt {
-  color: aliceblue;
-  position: absolute;
-  left: 20vw;
-  top: 20vh;
+a,
+a :hover {
+  text-decoration: none;
+  color: #78169f;
 }
 
 @media (max-width: 768px) {
@@ -125,11 +113,5 @@ mark {
   }
 }
 
-@media (m-width: 375px) {
-  .heroTxt {
-    /* width: 30vw; */
-    margin-top: 20vh;
-    font-size: small;
-    text-align: left;
-  }
+@media (max-width: 375px) {
 }
