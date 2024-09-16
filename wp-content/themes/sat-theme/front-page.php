@@ -9,11 +9,13 @@ get_header();
                 <h2>Student Attendance Tracker (SAT)</h2>
                 <h5>A school management tool for educators</h5>
                 <br>
-                <p>Please select your account type</p>
                 <div>
-                    <a href="http://localhost:8888/login-page/" class="btn btn" role="button" aria-pressed="true">Teacher</a>
+                    <a href="/login/" class="btn btn" role="button" aria-pressed="true">Login</a>
 
-                    <a href="{{ url_for('show_create_parent') }}" class="ms-5 btn btn" role="button" aria-pressed="true">Parent</a>
+                </div>
+                <div>
+                    <p class="mt-2">Not registered yet?<a href="/register/" class="" role="button" aria-pressed="true"> Sign up</a></p>
+
                 </div>
             </div>
         </div>

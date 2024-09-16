@@ -4,6 +4,7 @@
 function sat_theme_support()
 {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'sat_theme_support');
@@ -43,14 +44,14 @@ function sat_theme_register_scripts()
 {
     wp_enqueue_script(
         'sat-bootstrap-js',
-        get_template_directory_uri() . "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
         array(),
         '5.3.3',
         'all'
     );
     wp_enqueue_script(
         'sat-bootstrap-popper',
-        get_template_directory_uri() . "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+        "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
         array(),
         '2.11.8',
         'all'
@@ -58,3 +59,31 @@ function sat_theme_register_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'sat_theme_register_scripts');
+
+
+//customize wp-login page
+//add link to logo
+function wp_login_page_URL($url)
+{
+    $url = home_url('/');
+    return $url;
+}
+add_filter('login_headerurl', 'wp_login_page_URL');
+
+//change WP default logo to custom logo
+function add_custom_login_page()
+{
+    echo
+    '<style type="text/css"> 
+    .login h1 a {
+    background-image: url("http://localhost:8888/wp-content/uploads/2024/09/sat_logo.png");
+    background-size: 84px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+    body {
+    background-color: #6610f2;
+}
+    </style>';
+}
+add_action('logo_head', 'add_custom_login_page');
