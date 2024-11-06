@@ -5,7 +5,8 @@ wp_head()
 
 <div class="container-fluid p-5 mt-5">
     <div class="row align-items-start">
-        <?php the_content() ?>
+        <h1> Welcome to Student Attendance Tracker </h1>
+
     </div>
 </div>
 

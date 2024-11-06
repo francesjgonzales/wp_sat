@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 ?>
 
 <div class="container-fluid p-5 mt-5">
@@ -12,9 +13,12 @@ get_header();
                 get_template_part('template-parts/content', 'article');
             }
         }
-
         ?>
     </div>
+
+
+
+
 
 
 </div>
