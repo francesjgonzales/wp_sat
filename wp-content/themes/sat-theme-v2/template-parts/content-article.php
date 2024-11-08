@@ -9,7 +9,7 @@ get_header();
     </ol>
 </nav>
 
-<h3><?php the_field('lesson_title') ?></h3>
+<h3><?php get_field('lesson_title') ?></h3>
 <div class="container-sm">
     <div class="col-6">
         <ul class="list-group">

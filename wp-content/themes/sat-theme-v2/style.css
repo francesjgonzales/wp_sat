@@ -105,10 +105,10 @@ a :hover {
   color: #78169f;
 }
 
-#menu-main-menu {
+/* #menu-main-menu {
   display: contents;
   list-style-type: none !important;
-}
+} */
 
 li {
   padding-right: 1.2em;
@@ -116,6 +116,14 @@ li {
 
 .navbar-collapse {
   justify-content: end;
+}
+
+ul li ul {
+  display: none;
+}
+
+ul li:hover ul {
+  display: block;
 }
 
 @media (max-width: 768px) {

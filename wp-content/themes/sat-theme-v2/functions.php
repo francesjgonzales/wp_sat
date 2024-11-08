@@ -87,3 +87,20 @@ function add_custom_login_page()
     </style>';
 }
 add_action('logo_head', 'add_custom_login_page');
+
+
+
+// Register a custom post type called "agenda"
+function create_agenda_post_type()
+{
+    register_post_type('agenda', array(
+        'labels' => array(
+            'name' => 'Agenda',
+            'singular_name' => 'Agenda Item'
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+    ));
+}
+add_action('init', 'create_agenda_post_type');
