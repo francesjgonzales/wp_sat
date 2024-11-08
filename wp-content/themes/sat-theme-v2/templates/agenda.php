@@ -5,10 +5,7 @@ get_header();
 
 <div class="container-fluid p-5 mt-5">
     <div class="row align-items-start">
-        <h1>Agenda Page</h1>
-
-
-
+        <h1>Agenda for <?php echo date('F j, Y'); ?></h1>
 
         <?php
         // Set up a query to get the latest 5 posts
@@ -28,7 +25,7 @@ get_header();
                 // Output each post title and link
                 echo '<li>';
                 echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a>';
-                echo '<p>' . the_field('deadline') . '</p>';
+                echo '<p>' . the_field('task') . '</p>';
                 echo '</li>';
             endwhile;
             echo '</ul>'; // Close the unordered list

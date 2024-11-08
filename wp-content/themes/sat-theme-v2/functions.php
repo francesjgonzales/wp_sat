@@ -100,7 +100,23 @@ function create_agenda_post_type()
         ),
         'public' => true,
         'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+        'supports' => array('title', 'custom-fields', 'page-attributes'),
     ));
 }
 add_action('init', 'create_agenda_post_type');
+
+
+// Register a custom post type called "lesson plan"
+/* function create_lessons_post_type()
+{
+    register_post_type('agenda', array(
+        'labels' => array(
+            'name' => 'Agenda',
+            'singular_name' => 'Agenda Item'
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+    ));
+}
+add_action('init', 'create_lessons_post_type'); */
