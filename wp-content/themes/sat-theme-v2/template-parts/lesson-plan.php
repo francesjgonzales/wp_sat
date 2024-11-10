@@ -12,6 +12,7 @@ get_header();
 
     <div class="container-sm">
         <div class="col-6">
+
             <?php the_content() ?>
         </div>
     </div>
