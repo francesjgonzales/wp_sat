@@ -70,7 +70,7 @@ function wp_login_page_URL($url)
 }
 add_filter('login_headerurl', 'wp_login_page_URL');
 
-//change WP default logo to custom logo
+/* //change WP default logo to custom logo
 function add_custom_login_page()
 {
     echo
@@ -87,7 +87,17 @@ function add_custom_login_page()
     </style>';
 }
 add_action('logo_head', 'add_custom_login_page');
+ */
 
+/**
+ * Remove default Posts screen.
+ */
+function post_remove()
+{
+    remove_menu_page('edit.php');
+}
+
+add_action('admin_menu', 'post_remove');
 
 
 // Register a custom post type called "agenda"
@@ -105,18 +115,17 @@ function create_agenda_post_type()
 }
 add_action('init', 'create_agenda_post_type');
 
-
-// Register a custom post type called "lesson plan"
-/* function create_lessons_post_type()
+// Register a custom post type called "announcements"
+function create_announcement_post_type()
 {
-    register_post_type('agenda', array(
+    register_post_type('announcement', array(
         'labels' => array(
-            'name' => 'Agenda',
-            'singular_name' => 'Agenda Item'
+            'name' => 'Announcement',
+            'singular_name' => 'Announcement Item'
         ),
         'public' => true,
         'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+        'supports' => array('title', 'custom-fields', 'page-attributes'),
     ));
 }
-add_action('init', 'create_lessons_post_type'); */
+add_action('init', 'create_announcement_post_type');
